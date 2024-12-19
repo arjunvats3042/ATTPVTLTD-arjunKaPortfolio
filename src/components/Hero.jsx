@@ -1,5 +1,4 @@
 import React from "react";
-import motivation from "../assets/motivation.png"; // Assuming you use this image somewhere
 import {motion} from "framer-motion";
 import Technologies from "./Technologies";
 
