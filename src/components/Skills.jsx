@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import One from "./skills/one";
+import One from "./skills/One";
 // import Two from "./skills/Two";
 import Three from "./skills/Three";
 import Four from "./skills/Four";
