@@ -4,9 +4,11 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <StyledWrapper>
-      <div className="flex flex-col justify-center items-center p-5 bg-black">
-        <div className="
-       foot flex gap-20">
+      <div className="flex flex-col justify-center items-center p-5 dark:bg-gray-800 ">
+        <div
+          className="
+       foot flex gap-20"
+        >
           <a
             className="social-link1"
             href="https://github.com/arjunvats3042"

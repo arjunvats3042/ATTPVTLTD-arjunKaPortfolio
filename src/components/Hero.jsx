@@ -14,9 +14,9 @@ const Hero = () => {
               initial={{x: -100, opacity: 0}}
               animate={{x: 0, opacity: 1}}
               transition={{duration: 0.7, delay: 0.5}}
-              className="pb-8 text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight lg:mt-16 select-none"
+              className="mt-6 pb-8 text-7xl sm:text-8xl lg:text-9xl font-bold tracking-tight lg:mt-16 select-none"
             >
-              <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 bg-clip-text text-transparent font-extrabold">
+              <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent font-bold">
                 Arjun Vats
               </span>
             </motion.h1>

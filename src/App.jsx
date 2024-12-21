@@ -9,6 +9,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Footer />
+      
     </div>
   );
 };
