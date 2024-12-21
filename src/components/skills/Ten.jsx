@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
     --blur: 1.75rem;
     --box-blur: calc(0.5 * var(--blur));
     --glow: var(--color);
-    --size: 12rem;
+    --size: 10rem;
 
     align-items: center;
     border-radius: 12px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
@@ -6,9 +6,38 @@ import Card3 from "./Card3";
 // import Card4 from "./Card4";
 
 const Button = () => {
+  const [visible, setVisible] = useState(false);
+  const containerRef = useRef(null);
+
+  // Intersection Observer for triggering animations when the cards come into view
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === containerRef.current) {
+          if (entry.isIntersecting) {
+            setVisible(true); // Trigger animation when in view
+          } else {
+            setVisible(false); // Reset when out of view
+          }
+        }
+      });
+    });
+
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    return () => {
+      if (containerRef.current) observer.unobserve(containerRef.current);
+    };
+  }, []);
+
   return (
     <StyledWrapper>
-      <div className="icons select-none scroll-smooth lg:pb-20">
+      <div
+        className={`pt-20 icons select-none scroll-smooth lg:pb-20 ${
+          visible ? "visible" : "hidden"
+        }`}
+        ref={containerRef}
+      >
         <div className="title">
           <span>P</span>
           <span>R</span>
@@ -37,6 +66,14 @@ const StyledWrapper = styled.div`
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .icons.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .title {
@@ -49,14 +86,27 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     color: white;
+    padding-bottom: 30px;
   }
 
   .title span {
     text-shadow: 1px 1px #ffffff;
   }
 
+  /* Animation for individual cards */
+  .icons > div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .icons.visible > div {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* Responsive Styles */
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     .icons {
       grid-template-columns: 1fr; /* Stacks the cards on smaller screens */
       gap: 40px;
@@ -64,10 +114,10 @@ const StyledWrapper = styled.div`
 
     .title {
       grid-column-start: 1;
-      grid-column-end: 1;
-      font-size: 20px; /* Smaller title font size for mobile */
-      flex-wrap: wrap; /* Allow title letters to wrap if necessary */
-      justify-content: center; /* Center the title letters */
+      grid-column-end: 3;
+      font-size: 22px; /* Smaller title font size for mobile */
+
+      // justify-content: center;
       color: white;
     }
   }
@@ -76,8 +126,7 @@ const StyledWrapper = styled.div`
     .title {
       grid-column-start: 1;
       grid-column-end: 1;
-      font-size: 18px; /* Even smaller title font size for very small screens */
-      color: white;
+      font-size: 20px; /* Smaller title for small screens */
     }
   }
 `;

@@ -149,11 +149,11 @@ const StyledWrapper = styled.div`
     color: rgba(0, 78, 137, 1); /* Blue */
 
     font-size: 15px;
-    margin-top: 20px;
+    // margin-bottom: 40px;
   }
 
   .bottom {
-    padding: 10px 12px;
+    padding: 2px 2px;
     transform-style: preserve-3d;
     position: absolute;
     bottom: 20px;

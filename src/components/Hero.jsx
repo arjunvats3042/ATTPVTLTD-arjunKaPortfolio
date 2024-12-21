@@ -1,10 +1,11 @@
 import React from "react";
 import {motion} from "framer-motion";
+import {ReactTyped} from "react-typed"; // Importing the typing effect library
 import Technologies from "./Technologies";
 
 const Hero = () => {
   return (
-    <div className="pt-20 pb-10 lg:mb-35 bg-black ">
+    <div className="pt-20 pb-10 lg:mb-35 bg-black">
       <div className="flex flex-wrap items-center">
         {/* Text Section */}
         <div className="w-full lg:w-1/2 px-4">
@@ -12,37 +13,51 @@ const Hero = () => {
             <motion.h1
               initial={{x: -100, opacity: 0}}
               animate={{x: 0, opacity: 1}}
-              transition={{duration: 0.5, delay: 1}}
-              className="pb-16 text-4xl sm:text-7xl lg:text-8xl font-chakra tracking-tight lg:mt-16 select-none"
+              transition={{duration: 0.7, delay: 0.5}}
+              className="pb-8 text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight lg:mt-16 select-none"
             >
-              <span className="bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400 bg-clip-text tracking-tight text-transparent select-none font-chakra ">
+              <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 bg-clip-text text-transparent font-extrabold">
                 Arjun Vats
               </span>
             </motion.h1>
-            <motion.span
+
+            <motion.div
               initial={{x: -100, opacity: 0}}
               animate={{x: 0, opacity: 1}}
               transition={{duration: 0.5, delay: 1.5}}
               className="bg-gradient-to-r from-slate-500 via-blue-200 to-blue-500 bg-clip-text text-2xl sm:text-3xl lg:text-4xl tracking-tight text-transparent select-none font-chakra"
             >
-              MERN Stack Developer
-            </motion.span>
+              <ReactTyped
+                strings={["MERN Stack Developer", "Programmer"]}
+                typeSpeed={100}
+                backSpeed={50}
+                backDelay={1000}
+                startDelay={500}
+                loop
+              />
+            </motion.div>
+
             <motion.p
               initial={{x: -100, opacity: 0}}
               animate={{x: 0, opacity: 1}}
               transition={{duration: 0.5, delay: 2}}
-              className="my-2 max-w-xl py-6 font-light tracking-tighter select-none font-inconsolata text-lg sm:text-xl text-white"
+              className="my-4 max-w-xl py-6 tracking-tighter select-none font-inconsolata text-lg sm:text-xl text-white"
             >
-              I am a pre-final year B.Tech student and a passionate MERN stack
-              developer with a focus on building dynamic, responsive, and
-              user-friendly web applications. Alongside my expertise in modern
-              web technologies, I have a strong foundation in Data Structures
-              and Algorithms, which enhances my problem-solving abilities and
-              enables me to write efficient, optimized code. I enjoy combining
-              clean, scalable development practices with logical thinking to
-              create impactful solutions. Continuously learning and improving, I
-              aim to bridge the gap between design and functionality. Let’s
-              connect and bring innovative ideas to life!
+              A passionate{" "}
+              <span className="italic text-slate-400">
+                MERN stack developer
+              </span>{" "}
+              with a knack for creating intuitive and{" "}
+              
+                responsive web applications. I enjoy solving problems and turning{" "}
+              complex ideas into
+              simple, functional solutions. Always eager to learn and experiment
+              with{" "}
+              new technologies, I
+              strive to blend creativity with technical skill to build seamless,
+              impactful experiences. Dedicated to continuous improvement, I’m
+              always looking for ways to enhance my work and collaborate on
+              exciting projects.
             </motion.p>
           </div>
         </div>

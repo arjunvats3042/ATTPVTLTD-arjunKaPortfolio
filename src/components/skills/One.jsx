@@ -27,7 +27,7 @@ const StyledWrapper = styled.div`
     --blur: 1.75rem;
     --box-blur: calc(0.5 * var(--blur));
     --glow: var(--color);
-    --size: 12rem;
+    --size: 10rem;
     --color: #9b59b6; /* Default color for all items */
 
     align-items: center;
