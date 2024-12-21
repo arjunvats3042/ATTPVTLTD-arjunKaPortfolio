@@ -1,6 +1,21 @@
 import React from "react";
 
 const ContactForm = () => {
+  // const handleMouseOver = (e) => {
+  //   e.target.style.boxShadow = "0 0 20px 10px hsla(204, 70%, 53%, 0.5)";
+  //   const span = e.target.querySelector("span");
+  //   if (span) {
+  //     span.style.transform = "translateX(100%)";
+  //   }
+  // };
+
+  // const handleMouseOut = (e) => {
+  //   e.target.style.boxShadow = "none";
+  //   const span = e.target.querySelector("span");
+  //   if (span) {
+  //     span.style.transform = "translateX(-100%)";
+  //   }
+  // };
   return (
     <div className="p-6 bg-gray-100 dark:bg-gray-800 sm:rounded-lg flex flex-col items-center text-center">
       {/* Contact Information */}
@@ -61,6 +76,7 @@ const ContactForm = () => {
 
       {/* Contact Form */}
       <form
+        action="https://formsubmit.co/f27f8f5a6ed0b1970525ceaa45312648"
         method="post"
         className="p-6 flex flex-col justify-center w-full max-w-md"
       >
@@ -108,6 +124,38 @@ const ContactForm = () => {
         >
           Submit
         </button>
+        {/* <button
+          type="submit"
+          className="btn btn-primary btn-ghost"
+          style={{
+            position: "relative",
+            padding: "8px 20px",
+            borderRadius: 0,
+            overflow: "hidden",
+            background: "transparent",
+            transition: "0.6s",
+            color: "white",
+            fontSize: "20px",
+          }}
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+        >
+          Submit
+          <span
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background:
+                "linear-gradient(120deg, transparent, skyblue, transparent)",
+              transform: "translateX(-100%)",
+              transition: "0.6s",
+              zIndex: -1,
+            }}
+          ></span>
+        </button> */}
       </form>
     </div>
   );
