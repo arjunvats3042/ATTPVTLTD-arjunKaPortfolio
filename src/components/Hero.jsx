@@ -15,12 +15,11 @@ const Hero = () => {
               initial={{x: -100, opacity: 0}}
               animate={{x: 0, opacity: 1}}
               transition={{duration: 0.7, delay: 0.5}}
-              className="mt-6 pb-8 text-7xl sm:text-8xl lg:text-9xl font-bold tracking-tight lg:mt-16 select-none"
+              // className="mt-6 pb-8 text-5xl lg:text-9xl font-bold tracking-tight lg:mt-16 select-none"
             >
               <StyledWrapper>
                 <svg
-                  width="500"
-                  height="150"
+                  
                   viewBox="0 0 249 57"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,6 +93,18 @@ const Hero = () => {
   );
 };
 const StyledWrapper = styled.div`
+  svg {
+    width: 500px;
+    height: 150px;
+
+    @media (max-width: 900px) {
+      width: 350px; /* Larger size for laptop screens */
+    }
+
+    @media (max-width: 450px) {
+      width: 300px; /* Even larger for wider screens */
+    }
+  }
   svg path {
     fill: transparent;
     stroke: url(#gradient);
@@ -117,7 +128,7 @@ const StyledWrapper = styled.div`
     0% {
       fill: transparent;
     }
-    
+
     100% {
       fill: url(#gradient);
     }
