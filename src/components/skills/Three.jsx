@@ -9,7 +9,7 @@ const Three = () => {
       <div className="gas li">
         <FontAwesomeIcon className="symbol" icon={faHtml5} size="2x" />{" "}
         {/* Use the faHtml5 icon */}
-        <p className="font-chakra font-bold text-xl">HTML5</p>
+        <p className="font-chakra font-bold text-xl">HTML</p>
       </div>
     </StyledWrapper>
   );

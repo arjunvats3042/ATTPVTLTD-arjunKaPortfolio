@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
-import {ReactTyped} from "react-typed"; // Importing the typing effect library
+import {ReactTyped} from "react-typed";
 import Technologies from "./Technologies";
 import styled from "styled-components";
 

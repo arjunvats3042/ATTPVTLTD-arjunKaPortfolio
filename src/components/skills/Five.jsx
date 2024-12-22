@@ -9,7 +9,7 @@ const Five = () => {
       <div className="gas kr">
         <FontAwesomeIcon className="symbol" icon={faReact} size="2x" />
         {/* Use the faReact icon */}
-        <p className="font-chakra font-bold text-xl">React</p>
+        <p className="font-chakra font-bold text-xl">React.js</p>
       </div>
     </StyledWrapper>
   );

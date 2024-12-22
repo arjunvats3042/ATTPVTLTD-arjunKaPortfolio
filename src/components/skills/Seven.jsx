@@ -8,7 +8,7 @@ const Seven = () => {
       <div className="gas xe">
         <SiExpress className="symbol" size={60} />{" "}
         {/* Use the SiExpress icon */}
-        <p className="font-chakra font-bold text-xl">Express</p>
+        <p className="font-chakra font-bold text-xl">Express.js</p>
       </div>
     </StyledWrapper>
   );
